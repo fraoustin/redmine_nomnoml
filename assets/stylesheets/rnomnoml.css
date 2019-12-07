@@ -1,0 +1,10 @@
+div.nomnoml {
+    display:none;
+}
+
+canvas.nomnoml {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
