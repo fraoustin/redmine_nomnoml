@@ -1,4 +1,4 @@
-# RedmineViz
+# Redmine Nomnoml
 
 ## Summary
 
