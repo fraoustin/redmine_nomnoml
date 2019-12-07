@@ -2,43 +2,42 @@
 
 ## Summary
 
-Add [Viz](http://viz-js.com/) in [Redmine](http://www.redmine.org/)  
+Add [nomnoml](http://www.nomnoml.com/) in [Redmine](http://www.redmine.org/)  
 
 ## Usage
 
-You can add your graphivz code in wiki or issue by editor
+You can add your nomnoml code in wiki or issue by editor
 
 ```
     my text with my code
-    {{graphviz
-    a -> b;
-    b -> c;
-    c -> d;
-    d -> a;
-    }}
-    {{graphviz(circo)
-    a -> b;
-    b -> c;
-    c -> d;
-    d -> a;
+    {{nommol
+    Pirate|eyeCount: Int|raid();pillage()|
+    [beard]--[parrot]
+    [beard]-:>[foul mouth]
+    ]
+
+    [<abstract>Marauder]<:--[Pirate]
+    [Pirate]- 0..7[mischief]
+    [jollyness]->[Pirate]
+    [jollyness]->[rum]
+    [jollyness]->[singing]
+    [Pirate]-> *[rum|tastiness: Int|swig()]
+    [Pirate]->[singing]
+    [singing]<->[rum]
+
+    [<start>st]->[<state>plunder]
+    [plunder]->[<choice>more loot]
+    [more loot]->[st]
+    [more loot] no ->[<end>e]
+
+    [<actor>Sailor] - [<usecase>shiver me;timbers]
     }}
 ```
-
-You can use as engine
-
-- dot (default)
-- circo
-- fdp
-- neato
-- osage
-- twopi
-
-(you can try on http://viz-js.com/)
 
 ## Installation
 ```
 $ cd redmine/plugins
-$ git clone https://github.com/fraoustin/rviz.git
+$ git clone https://github.com/fraoustin/redmine_nomnoml.git
 ```
 
 restart Redmine
