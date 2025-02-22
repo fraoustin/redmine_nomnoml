@@ -41,3 +41,13 @@ $ git clone https://github.com/fraoustin/redmine_nomnoml.git
 ```
 
 restart Redmine
+
+I had an issue with Redmine 6.0: the redmine/public folder was empty. I manually created the missing directories.
+
+```
+$ cd redmine/public
+$ mkdir redmine_nomnoml
+$ cd redmine_nomnoml
+$ ln -s ln -s ../../../plugins/redmine_nomnoml/assets/javascripts javascripts
+$ ln -s ln -s ../../../plugins/redmine_nomnoml/assets/stylesheets stylesheets
+```
